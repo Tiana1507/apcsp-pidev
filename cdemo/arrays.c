@@ -12,8 +12,9 @@ int arrayAdd(int* arr, int s, int n) {
 
 int main(void) {
   int arrone[100];
-  arrayAdd(arrone, 100, 3);
-   for (int j = 0; j < sizeof(arrone); j++ ) {
+  int arrsize = sizeof(arrone) / sizeof(arrone[0]);
+  arrayAdd(arrone, arrsize, 3);
+   for (int j = 0; j < arrsize; j++ ) {
       printf("Element[%d] = %d\n", j, arrone[j] );
    }
 }
